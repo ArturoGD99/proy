@@ -1,0 +1,11 @@
+@include tablet {
+    .nosotros{
+        @include grid(2,3rem);
+    }
+}
+.negrita{
+    font-weight: 900;
+}
+.texto{
+    font-weight: 400;
+}
