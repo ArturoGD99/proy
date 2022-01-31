@@ -73,7 +73,7 @@
         }
         
         //validar por tamaño
-        $medida=2*1000*100;
+        $medida=2*1000*1000;
         if($imagen['size']>$medida){
             $errores[]="La imagen es muy pesada";
         }
@@ -81,18 +81,27 @@
 
         //revisar arreglo vacio
         if(empty($errores)){
-            //Subida de archivos
             //crear carpeta
-            //$carpetaImagenes='../../imagenes/';
-            //if(!is_dir($carpetaImagenes)){
-            //    mkdir($carpetaImagenes);
-           // } 
-            //generar nombre unico para imagenes
-            //$nombreImagen=md5(uniqid(rand(),true)). ".jpg";
-            //subir imagen
-           // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+            $carpetaImagenes='../../imagenes/';
+            if(!is_dir($carpetaImagenes)){
+                mkdir($carpetaImagenes);
+            } 
+            $nombreImagen='';
+            //Subida de archivos
+            if($imagen['name']){
+                //Eliminar imagen previa
+                unlink($carpetaImagenes . $propiedad['imagen']);//elimina la imagen del servidor para poderla actualizar
+                //generar nombre unico para imagenes
+                $nombreImagen=md5(uniqid(rand(),true)). ".jpg";
+                //subir imagen
+                move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+            }else{
+                $nombreImagen=$propiedad['imagen'];
+            }
+            
+            
             //insertar
-            $query="UPDATE propiedades SET titulo='${titulo}',precio='${precio}',descripcion='${descripcion}',habitaciones=${habitaciones},
+            $query="UPDATE propiedades SET titulo='${titulo}',precio='${precio}',descripcion='${descripcion}',imagen='${nombreImagen}',habitaciones=${habitaciones},
             wc=${wc},estacionamiento=${estacionamiento},creado=NOW(),idvendedor=${idvendedor} WHERE id=${id}";
             //VALUES(null,'','$precio','$nombreImagen','$descripcion','$habitaciones','$wc','$estacionamiento',NOW(),'$idvendedor')";
             // echo $query;
