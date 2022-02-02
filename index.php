@@ -33,95 +33,10 @@
     </main>
     <section class="seccion contenedor">
         <h2>Casas y Depas en Venta</h2>
-        <div class="contenedor-anuncios">
-            <div class="anuncio">
-                <picture>
-                    <source srcset="build/img/anuncio1.webp" type="image/webp">
-                    <source srcset="build/img/anuncio1.jpg" type="image/jpeg">
-                    <img loading="lazy" src="build/img/anuncio1.jpg" alt="anuncio">
-                </picture>
-                <div class="contenido-anuncio">
-                    <h3>Casa de Lujo en el Lago</h3>
-                    <p>Descripcion HD</p>
-                    <p class="precio">$3,000,000</p>
-                    <ul class="iconos-caracteristicas">
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_wc.svg" alt="Icono wc">
-                            <p>3</p>
-                        </li>
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Icono estacionamiento">
-                            <p>2</p>
-                        </li>
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Dormitorio">
-                            <p>5</p>
-                        </li>
-                    </ul>
-                    <a class="boton boton-amarillo" href="anuncio.html">
-                        Ver Propiedad
-                    </a>
-                </div>
-            </div>
-            <div class="anuncio">
-                <picture>
-                    <source srcset="build/img/anuncio2.webp" type="image/webp">
-                    <source srcset="build/img/anuncio2.jpg" type="image/jpeg">
-                    <img loading="lazy" src="build/img/anuncio2.jpg" alt="anuncio">
-                </picture>
-                <div class="contenido-anuncio">
-                    <h3>Casa terminados de lujo</h3>
-                    <p>Descripcion HD</p>
-                    <p class="precio">$4,000,000</p>
-                    <ul class="iconos-caracteristicas">
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_wc.svg" alt="Icono wc">
-                            <p>3</p>
-                        </li>
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Icono estacionamiento">
-                            <p>2</p>
-                        </li>
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Dormitorio">
-                            <p>5</p>
-                        </li>
-                    </ul>
-                    <a class="boton boton-amarillo" href="anuncio.html">
-                        Ver Propiedad
-                    </a>
-                </div>
-            </div>
-            <div class="anuncio">
-                <picture>
-                    <source srcset="build/img/anuncio3.webp" type="image/webp">
-                    <source srcset="build/img/anuncio3.jpg" type="image/jpeg">
-                    <img loading="lazy" src="build/img/anuncio3.jpg" alt="anuncio">
-                </picture>
-                <div class="contenido-anuncio">
-                    <h3>Casa con alberca</h3>
-                    <p>Descripcion HD</p>
-                    <p class="precio">$2,000,000</p>
-                    <ul class="iconos-caracteristicas">
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_wc.svg" alt="Icono wc">
-                            <p>3</p>
-                        </li>
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_estacionamiento.svg" alt="Icono estacionamiento">
-                            <p>2</p>
-                        </li>
-                        <li>
-                            <img class="icono"loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Dormitorio">
-                            <p>5</p>
-                        </li>
-                    </ul>
-                    <a class="boton boton-amarillo" href="anuncio.html">
-                        Ver Propiedad
-                    </a>
-                </div>
-            </div>
-        </div>
+            <?php 
+                $limite=3;
+                include 'includes/templates/anuncios.php';
+            ?>
         <div class="alinear-derecha">
             <a href="anuncios.html" class="boton-verde">Ver todas</a>
         </div>
