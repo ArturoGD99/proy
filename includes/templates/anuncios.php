@@ -32,7 +32,7 @@
                             <p><?php echo $propiedad['habitaciones']; ?></p>
                         </li>
                     </ul>
-                    <a class="boton boton-amarillo" href="anuncio.php?id=<?php echo $propiedad['id']; ?>">
+                    <a class="boton boton-amarillo" href="../../anuncio.php?id=<?php echo $propiedad['id']; ?>">
                         Ver Propiedad
                     </a>
                 </div>
